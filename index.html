@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Roman Numerals Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-4">Roman Numerals Converter (1 to 4999 only)</h1>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-numToRoman-tab"
+            data-toggle="tab"
+            href="#nav-numToRoman"
+            role="tab"
+            aria-controls="nav-numToRoman"
+            aria-selected="true"
+            >Number to Roman Numerals</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-profile-tab"
+            data-toggle="tab"
+            href="#nav-profile"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+            >Roman Numerals to Number</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-numToRoman"
+          role="tabpanel"
+          aria-labelledby="nav-numToRoman-tab"
+        >
+          <div class="container my-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-xl-6">
+                <form>
+                  <div class="form-group">
+                    <label><b>Number</b></label>
+                    <input
+                      type="number"
+                      class="form-control form-control-lg"
+                      id="numToRoman"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label><b>Roman Number</b></label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="romanAns"
+                      readonly
+                    />
+                  </div>
+
+                  <label
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="NumToRoman()"
+                    >Convert to Roman</label
+                  >
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <div class="container my-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-xl-6">
+                <form>
+                  <div class="form-group">
+                    <label><b>Roman Number</b></label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="romanToNum"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label><b>Number</b></label>
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="numAns"
+                      readonly
+                    />
+                  </div>
+
+                  <label
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="RomanToNum()"
+                    >Convert to Number</label
+                  >
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 col-xl-10">
+            <h4>Key concept for converting</h4>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col-md" style="width: 50%">Number</th>
+                  <th scope="col-md" style="width: 50%">Roman Number</th>
+                </tr>
+              </thead>
+              <tbody id="data-conversion"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
